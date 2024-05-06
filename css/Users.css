@@ -1,0 +1,54 @@
+.users-box {
+  padding-top: 100px;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.user {
+  background-color: #1b1b1b;
+  margin: 10px 0px;
+  padding: 16px;
+  font-family: "GT Eesti Pro Display";
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  border-radius: 5px;
+}
+
+.users-box h1 {
+  margin-bottom: 40px;
+}
+
+.watched {
+  color: #9f9f9f;
+  margin-left: 100px;
+  width: 220px;
+}
+
+.vixi {
+  width: 120px;
+  background-color: #ffcc00;
+  color: #0a0a09;
+  font-family: "GT Eesti Pro Display";
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  padding: 10px;
+  margin-left: 100px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.vixi:hover {
+  background-color: #c0a123;
+}
+
+.user-name {
+  width: 100%;
+  font-weight: 500;
+  font-size: 18px;
+}

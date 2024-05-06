@@ -1,0 +1,129 @@
+.top-block {
+  width: 1360px;
+  margin: 0px auto;
+  padding: 0px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.top-block h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0px auto;
+  margin-bottom: 30px;
+}
+
+.movie-card-best {
+  width: 1060px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffcc00;
+  padding: 16px;
+  min-height: 300px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+
+.movie-card-best-top-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 30px;
+}
+
+.movie-image {
+  height: 330px;
+  width: 230px;
+  margin: 20px 0px;
+}
+
+.movie-view-date-best {
+  font-size: 16px;
+  color: #0a0a09;
+  padding: 5px 0px;
+  font-weight: 600;
+  margin: 0 auto;
+}
+
+.movie-info {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 20px;
+}
+.movie-info-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  align-items: center;
+  margin: 0px 20px;
+}
+
+.movie-comment-best {
+  background-color: #0a0a09;
+  padding: 20px;
+  margin: 40px 0px;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 5px;
+  text-align: justify;
+  white-space: pre-line;
+  min-width: 100%;
+  min-height: 100px;
+}
+
+.movie-title-best {
+  font-size: 24px;
+  text-align: center;
+  color: #0a0a09;
+  font-weight: 600;
+}
+.details-best {
+  width: 160px;
+  background-color: #747daf;
+  color: #0a0a09;
+  font-family: "GT Eesti Pro Display";
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  padding: 10px;
+  border: 2px solid #0a0a09;
+}
+.details-best:hover {
+  background-color: #6d77ab;
+}
+
+.movie-rating {
+  background-color: #0a0a09;
+  font-size: 24px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-family: "Roboto Slab", serif;
+}
+
+.page {
+  padding-bottom: 100px;
+}
+
+.pagination {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,118 @@
+@font-face {
+  font-family: GT Eesti Pro Display;
+  src: url("../public/gteestiprodisplay_regular.woff") format("woff");
+}
+.total-site-container {
+  width: 1700px;
+  margin: 0px auto;
+  padding: 50px 0px;
+}
+.header-box {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+}
+.container {
+  margin: 0 auto;
+}
+
+.page {
+  min-height: 100vh;
+}
+.header-2 {
+  background-color: #141414;
+  color: #fff;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "GT Eesti Pro Display";
+}
+.header-3 {
+  background-color: #1a1a1a;
+  color: #fff;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+  font-weight: 600;
+}
+
+.header-content {
+  width: 1360px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-links {
+  width: 1360px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: aquamarine; */
+}
+.header-links-block1,
+.header-links-block2 {
+  display: flex;
+}
+.header-link {
+  margin: 0 12px;
+  color: #b1b1b1;
+  text-decoration: none;
+}
+.header-link:hover {
+  color: white;
+}
+.badge {
+  background-color: #1a1a1a;
+  color: #ffcc00;
+  border-radius: 15px;
+  padding: 0px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  user-select: none;
+  border: 2px solid #ffcc00;
+}
+
+.main {
+  background-color: #0a0a09;
+  color: #fff;
+  font-family: "GT Eesti Pro Display";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  position: relative;
+  min-height: 100vh;
+}
+
+.footer {
+  background-color: #141414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.header-link.active {
+  color: #ffcc00;
+}

@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+.countdown-page-container {
+  display: flex;
+  width: 60%;
+  margin: 0px auto;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+  padding: 50px 0px;
+}
+.countdown-box {
+  background-color: #1b1b1b;
+  margin: 20px;
+  width: 27vw;
+  padding: 20px;
+  display: flex;
+  justify-content: left;
+  border-radius: 3px;
+  font-family: "GT Eesti Pro Display";
+  height: auto;
+}
+
+.countdown-box img {
+  width: 150px;
+  height: 150px;
+  border-radius: 3px;
+}
+
+.countdown-title-box {
+  margin: 5px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.countdown-title {
+  font-size: 20px;
+}
+.countdown-data {
+  color: #9f9f9f;
+}
+
+.countdown {
+  padding: 20px 0px;
+}
+
+@media screen and (max-width: 1400px) {
+  .countdown-title {
+    font-size: 16px;
+  }
+  .countdown,
+  .countdown-data {
+    font-size: 12px;
+  }
+  .countdown-box img {
+    width: 130px;
+    height: 130px;
+  }
+  .countdown-box {
+    width: 33vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .countdown-title {
+    font-size: 12px;
+  }
+  .countdown,
+  .countdown-data {
+    font-size: 10px;
+  }
+  .countdown-box img {
+    width: 100px;
+    height: 100px;
+  }
+  .countdown-box {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .countdown-title {
+    font-size: 12px;
+  }
+  .countdown,
+  .countdown-data {
+    font-size: 10px;
+  }
+  .countdown-box img {
+    width: 70px;
+    height: 70px;
+  }
+  .countdown-page-container,
+  .countdown-box {
+    width: 100%;
+  }
+}

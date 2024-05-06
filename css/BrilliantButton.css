@@ -1,0 +1,48 @@
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: 0px 0px;
+  border: 3px solid transparent;
+  padding-top: 50px;
+}
+
+.button-container button {
+  width: 150px;
+  background-color: #ffcc00;
+  color: #0a0a09;
+  font-family: "GT Eesti Pro Display";
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  padding: 10px;
+  border: 2px solid #0a0a09;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.button-container button:hover {
+  background-color: #c0a123;
+}
+
+.filter-box.active {
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  .button-container button {
+    padding: 6px 16px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .button-container button {
+    padding: 2px 12px;
+    font-size: 12px;
+  }
+}

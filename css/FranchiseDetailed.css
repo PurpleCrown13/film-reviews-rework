@@ -1,0 +1,120 @@
+.detailed-table {
+  border: 1px outset white;
+  border-collapse: collapse;
+  padding: 5px;
+  color: white;
+  font-family: "GT Eesti Pro Display";
+}
+
+.detailed-table th {
+  padding: 25px;
+  background-color: #747daf;
+  color: #111;
+  font-size: 18px;
+}
+
+.detailed-table td {
+  text-align: center;
+  padding: 5px;
+  background: #1a1a1a;
+  color: white;
+  font-size: 16px;
+  font-family: "GT Eesti Pro Display";
+  font-weight: 500;
+}
+.detailed-table tbody tr:hover td {
+  background-color: #333;
+  cursor: pointer;
+}
+
+.detailed-table td:nth-child(1),
+td:nth-child(4) {
+  width: 10%;
+}
+
+td:nth-child(2) {
+  width: 30%;
+}
+
+.detailed-table td:nth-child(2) img {
+  height: 200px;
+  width: 150px;
+  padding: 10px;
+}
+
+.f-d-title {
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+  font-size: 24px;
+  padding-bottom: 50px;
+  font-weight: 500;
+  font-family: "GT Eesti Pro Display";
+}
+
+.f-d-season {
+  color: #9999cc;
+}
+
+.f-d-rating {
+  font-size: 16px;
+  background-color: #777;
+  padding: 15px;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  color: #121212;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "GT Eesti Pro Display";
+  font-weight: 600;
+}
+
+.franchise-detaile-container {
+  padding-bottom: 150px;
+}
+
+@media screen and (max-width: 1300px) {
+  .detailed-table {
+    width: 40%;
+  }
+  .f-d-title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .f-d-title {
+    font-size: 12px;
+    padding: 20px;
+  }
+
+  .detailed-table th {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .detailed-table td {
+    font-size: 8px;
+  }
+
+  .f-d-rating {
+    font-size: 10px;
+    background-color: #777;
+    padding: 10px;
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+    color: #121212;
+    border-radius: 50px;
+  }
+
+  .detailed-table td:nth-child(2) img {
+    height: 80px;
+    width: 60px;
+    padding: 0px;
+  }
+}

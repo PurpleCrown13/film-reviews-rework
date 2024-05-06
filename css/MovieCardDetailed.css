@@ -1,0 +1,282 @@
+.MCD-container {
+  width: 1400px;
+  margin: 0px auto;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-block {
+  background-color: #141414;
+  margin: 0 0 24px;
+  width: 340px;
+  padding: 20px;
+  border-radius: 5px;
+  height: fit-content;
+}
+
+.right-block {
+  width: 1000px;
+  margin: 0 0 24px;
+  border-radius: 5px;
+}
+
+.poster {
+  width: 300px !important;
+  height: 410px !important;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.title,
+.comment,
+.franchise-box {
+  background-color: #141414;
+  border-radius: 5px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 500;
+  background-color: #0a0a09;
+  letter-spacing: 0.05rem;
+}
+
+.comment-container {
+  position: relative;
+}
+
+.comment-text {
+  font-family: "GT Eesti Pro Display";
+  font-size: 19px;
+  min-height: 200px;
+  text-align: justify;
+  white-space: pre-line;
+  letter-spacing: 0.05rem;
+}
+
+.comment-text.blurred {
+  filter: blur(10px);
+  user-select: none;
+}
+
+.view-btn-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  background-color: #0a0a09;
+  color: #ffcc00;
+  font-family: "GT Eesti Pro Display";
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.view-btn-centered:hover {
+  background-color: #141414;
+}
+
+.divider {
+  background-color: #747daf;
+  height: 1px;
+  margin: 14px 0px;
+}
+
+.stat {
+  color: #9f9f9f;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 0.05rem;
+}
+
+.rate {
+  text-align: center;
+  font-size: 20px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.edit-btn {
+  width: 40px;
+  background-color: #ffcc00;
+  color: #0a0a09;
+  font-family: "GT Eesti Pro Display";
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.edit-btn:hover {
+  background-color: #c0a123;
+}
+
+.delete-btn {
+  width: 40px;
+  background-color: #f33b3b;
+  color: #0a0a09;
+  font-family: "GT Eesti Pro Display";
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  padding: 10px;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+
+.delete-btn:hover {
+  background-color: #c03030;
+}
+
+.franchise-box {
+  font-family: "GT Eesti Pro Display";
+  font-size: 19px;
+}
+
+.franchise-title {
+  text-align: center;
+  font-size: 19px;
+}
+.franchise-columns,
+.franchise-content {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.franchise-content {
+  padding-bottom: 10px;
+  /* border-bottom: 1px solid #383838; */
+}
+
+.franchise-column-left,
+.franchise-content-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.franchise-column-right,
+.franchise-content-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.franchise-content-left,
+.franchise-content-right {
+  font-size: 16px;
+}
+
+.franchise-column-left,
+.franchise-column-right {
+  font-size: 12px;
+  color: #fff;
+  font-family: "GT Eesti Pro Display";
+}
+
+.franchise-season {
+  padding-left: 15px;
+  padding-right: 20px;
+}
+
+.franchise-rating,
+.franchise-content-rating {
+  padding-left: 30px;
+}
+
+.franchise-content-season {
+  margin-right: 30px;
+}
+
+.franchise-content-rating {
+  background-color: #0a0a09;
+  border-radius: 5px;
+  font-weight: 800;
+  color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 15px;
+  width: 40px;
+}
+
+.franchise-content-season {
+  padding: 0;
+  padding: 10px;
+  color: #adbac0;
+  border-radius: 50px;
+  height: 20px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.franchise-content-year {
+  color: #9f9f9f;
+  display: flex;
+  margin-right: 20px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.franchise-content-name {
+  font-size: 18px;
+  font-family: "GT Eesti Pro Display";
+  font-weight: 500;
+}
+
+.franchise-content-name:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.highlighted,
+.highlighted:hover {
+  color: #adbac0;
+  cursor: default;
+}
+
+.franchise-content-name:not(.highlighted) {
+  color: #676667;
+}
+
+.franchise-content-name:not(.highlighted):hover {
+  color: #fff;
+}

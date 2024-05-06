@@ -1,0 +1,105 @@
+.calendar-page {
+  padding: 50px 0px;
+  padding-bottom: 100px;
+}
+
+.calendar {
+  font-family: "GT Eesti Pro Display";
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 20px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #1a1a1a;
+}
+
+.month-header {
+  font-size: 22px;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #9f9f9f;
+  background-color: #1a1a1a;
+}
+
+.year-header {
+  font-family: "GT Eesti Pro Display";
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  text-align: center;
+  margin: 0px auto;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  padding: 10px;
+}
+
+.unwatched-movie {
+  position: relative;
+}
+.unwatched-movie:after {
+  position: absolute;
+  background-color: #141414;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "\274c"; /* use the hex value here... */
+  font-size: 20px;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+}
+
+.movie-day {
+  background-color: #ffd700 !important;
+  color: #000;
+  font-weight: bold;
+  border: 1px solid #ffd700;
+}
+.current-date {
+  color: black;
+  background-color: #747daf;
+  border: 1px solid #747daf;
+}
+
+.empty-day {
+  border: none;
+  background-color: #1a1a1a;
+}
+
+.week-day {
+  background-color: #141414;
+}
+
+@media (max-width: 600px) {
+  .days {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Два месяца в ширину */
+  grid-template-rows: repeat(6, auto); /* 6 строк */
+  gap: 40px; /* Пространство между месяцами */
+}
+
+.month {
+  width: calc(
+    50% + 50%
+  ); /* Ширина месяца, вычисленная как половина контейнера минус отступы */
+}

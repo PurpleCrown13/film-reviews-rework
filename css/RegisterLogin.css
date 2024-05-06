@@ -1,0 +1,26 @@
+.login-container {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  width: 40%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.login-container input {
+    outline: none;
+}
+
+.register-form{
+    background-color: #1A1A1A;
+}
+
+
+.error{
+    color: #FFCC00;
+    padding-top: 20px;
+}
+
+.login-css-form{
+    background-color: #1A1A1A;
+}

@@ -1,0 +1,254 @@
+.running-alert {
+  background-color: #c1cad1;
+  width: 30%;
+  margin: 0 auto;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.tab-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.area-chart-container {
+  width: 1200px;
+  margin: 50px auto;
+}
+
+.tab {
+  cursor: pointer !important;
+  border-radius: 0px !important;
+  font-weight: bold;
+  /* margin: 20px 10px; */
+  font-size: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  outline: none !important;
+  padding: 30px !important;
+  flex-direction: column;
+}
+
+.tab.active-tab {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+.not-active-tab {
+  background-color: #1a1a1a !important;
+}
+
+.tab-content {
+  /* border: 1px solid #ccc; */
+  padding: 40px 10px;
+  border-radius: 0 0 5px 5px;
+  margin: 0px 100px;
+}
+
+.cabinet-wrapper {
+  padding-bottom: 100px;
+}
+
+table {
+  width: 900px;
+  margin: 50px auto;
+  font-size: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  border-collapse: collapse;
+  font-weight: 900;
+}
+
+h1 {
+  padding-top: 50px;
+}
+td,
+th {
+  padding: 10px;
+  text-align: center !important;
+}
+
+table.statistic-table {
+  width: 40%;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+table.statistic-table td,
+table.statistic-table th {
+  border-width: 0px;
+  padding: 10px;
+}
+
+table.statistic-table thead {
+  background-color: #141414;
+  color: #fff;
+  font-size: 16px;
+}
+
+.customTable-name:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+.customTable-name {
+  color: #010810;
+}
+
+.logout-container {
+  display: flex;
+  justify-content: center;
+}
+
+.logout {
+  width: 10%;
+  padding: 10px;
+  /* background-color: #C34A36 !important; */
+  background-color: #ad2831 !important;
+  color: #121212;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 50px;
+  font-size: 20px !important;
+}
+
+.statistic-table-title {
+  background-color: #747daf;
+  font-size: 18px;
+  color: #000;
+}
+
+.select-container {
+  display: flex;
+  justify-content: center;
+}
+
+.select-cabinet {
+  cursor: pointer !important;
+  margin: 40px 0px !important;
+}
+
+.chart-container {
+  margin: 0px auto;
+}
+
+.title-for-chart {
+  margin: 50px 0px;
+}
+.donut {
+  height: 400px !important;
+}
+
+.line-chart {
+  width: 30%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.settings-container {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next-ui-autocomplete {
+  margin-top: 50px;
+}
+
+.next-ui-accordion-container {
+  width: 700px;
+  margin: 0px auto;
+}
+
+.next-ui-accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.next-ui-link {
+  margin: 20px 0px;
+}
+.progress-ui {
+  width: 40% !important;
+  margin: 50px auto;
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .next-ui-accordion-container {
+    width: 90% !important;
+  }
+
+  .accordion-snippet {
+    font-size: 8px !important;
+  }
+
+  .next-ui-link {
+    font-size: 12px !important;
+  }
+
+  .tab {
+    font-size: 8px !important;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 10px !important;
+  }
+
+  .running-alert {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 10px;
+  }
+  .logout {
+    width: 50%;
+    font-size: 10px;
+  }
+  .statistic-table-title {
+    font-size: 10px;
+  }
+  table {
+    width: 100% !important;
+  }
+  .tab-content {
+    padding: 40px 0px;
+    margin: 0px 30px;
+  }
+
+  table.statistic-table thead {
+    font-size: 8px;
+  }
+
+  table.statistic-table th {
+    padding: 10px;
+  }
+
+  table {
+    font-size: 6px;
+  }
+
+  table.statistic-table {
+    font-size: 6px;
+  }
+  .line-chart {
+    width: 100% !important;
+    margin-top: 50px;
+    height: fit-content;
+  }
+  .chart-container {
+    width: 100%;
+    height: 240px;
+  }
+  .progress-ui {
+    width: 70% !important;
+  }
+}

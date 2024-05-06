@@ -1,0 +1,121 @@
+.plannes-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0px auto;
+  flex-wrap: wrap;
+  min-height: 30vw;
+  margin-bottom: 200px;
+  padding-top: 100px;
+  font-family: "GT Eesti Pro Display";
+}
+
+.plannes-wrapper input {
+  background-color: #1a1a1a;
+  color: white;
+  border: 1px solid transparent;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+  font-size: 20px;
+  width: 500px;
+  border-radius: 5px;
+  font-family: "GT Eesti Pro Display";
+  font-weight: 600;
+}
+
+.plannes-wrapper input:hover {
+  border: 1px solid #ffcc00;
+}
+
+.plannes-wrapper input:focus {
+  outline: none;
+  border: 1px solid #ffcc00;
+}
+
+.plannes-wrapper button {
+  width: 150px;
+  background-color: #ffcc00;
+  color: #0a0a09;
+  font-family: "GT Eesti Pro Display";
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  padding: 10px;
+  border: 2px solid #0a0a09;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.plannes-wrapper button:hover {
+  background-color: #c0a123;
+}
+
+input::placeholder {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+}
+
+.plannes-table table {
+  border: 1px none #dededf;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 1px;
+  text-align: center;
+  font-size: 16px;
+  height: 60%;
+  margin: 0px auto;
+}
+
+.plannes-table caption {
+  caption-side: top;
+  text-align: left;
+}
+
+.plannes-table th {
+  border: 1px none #dededf;
+  background-color: #141414;
+  color: #fff;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.plannes-table td {
+  background-color: #1a1a1a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 0px;
+}
+.trash-button img {
+  margin: 0 auto;
+}
+
+.trash-button:hover {
+  background-color: #e63946;
+  cursor: pointer;
+}
+
+.plannes-table table {
+  width: 70%;
+}
+
+.plannes-table th:first-child,
+.plannes-table td:first-child {
+  width: 60%;
+}
+
+.plannes-table th:last-child,
+.plannes-table td:last-child {
+  width: 10%;
+}
