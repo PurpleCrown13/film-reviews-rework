@@ -30,7 +30,7 @@ const CabinetDetailed = () => {
   const [bestMovies, setBestdMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [visibleMoviesCount, setVisibleMoviesCount] = useState(42);
+  const [visibleMoviesCount, setVisibleMoviesCount] = useState(40);
   const [visibleBestMoviesCount, setVisibleBestMoviesCount] = useState(16);
   const currentURL = `${window.location.protocol}//${window.location.host}`;
 

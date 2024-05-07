@@ -85,12 +85,6 @@
   background-color: #141414;
 }
 
-@media (max-width: 600px) {
-  .days {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 .calendar {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Два месяца в ширину */
@@ -102,4 +96,28 @@
   width: calc(
     50% + 50%
   ); /* Ширина месяца, вычисленная как половина контейнера минус отступы */
+}
+
+@media (max-width: 1000px) {
+  .week-day {
+    display: none;
+  }
+  .days {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .days {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .days {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .calendar {
+    gap: 20px;
+  }
 }

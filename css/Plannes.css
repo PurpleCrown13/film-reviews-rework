@@ -22,7 +22,7 @@
   width: 500px;
   border-radius: 5px;
   font-family: "GT Eesti Pro Display";
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .plannes-wrapper input:hover {
@@ -74,7 +74,7 @@ input::placeholder {
   text-align: center;
   font-size: 16px;
   height: 60%;
-  margin: 0px auto;
+  margin: 60px auto;
 }
 
 .plannes-table caption {
@@ -118,4 +118,36 @@ input::placeholder {
 .plannes-table th:last-child,
 .plannes-table td:last-child {
   width: 10%;
+}
+
+@media screen and (max-width: 1100px) {
+  .plannes-wrapper input {
+    width: 300px;
+  }
+  .plannes-table th {
+    font-size: 12px;
+  }
+  .plannes-table td {
+    font-size: 10px;
+  }
+  .plannes-table th:last-child,
+  .plannes-table td:last-child {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .plannes-wrapper input {
+    width: 100%;
+  }
+  .plannes-table th {
+    font-size: 10px;
+  }
+  .plannes-table td {
+    font-size: 8px;
+  }
+  .plannes-wrapper button {
+    width: 100px;
+    font-size: 12px;
+  }
 }

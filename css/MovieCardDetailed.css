@@ -157,6 +157,7 @@
 .franchise-box {
   font-family: "GT Eesti Pro Display";
   font-size: 19px;
+  margin: 10px auto;
 }
 
 .franchise-title {
@@ -279,4 +280,80 @@
 
 .franchise-content-name:not(.highlighted):hover {
   color: #fff;
+}
+
+@media screen and (max-width: 1520px) {
+  .MCD-container {
+    flex-direction: column-reverse;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0px;
+  }
+  .comment-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .comment-text {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 20px;
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .right-block {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .MCD-container {
+    width: 70%;
+  }
+  .comment-container {
+    width: 70%;
+  }
+  .comment-text {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 20px;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .MCD-container {
+    width: 50%;
+  }
+  .comment-container {
+    width: 100%;
+  }
+  .comment-text {
+    font-size: 12px;
+  }
+  .title {
+    font-size: 18px;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .MCD-container {
+    width: 90%;
+  }
+  .comment-container {
+    width: 100%;
+  }
+  .comment-text {
+    font-size: 12px;
+  }
+  .title {
+    font-size: 18px;
+    width: 90%;
+  }
 }

@@ -1,5 +1,5 @@
 .top-block {
-  width: 1360px;
+  width: 95%;
   margin: 0px auto;
   padding: 0px 30px;
   display: flex;
@@ -16,7 +16,7 @@
 }
 
 .movie-card-best {
-  width: 1060px;
+  width: 95%;
   margin: 30px auto;
   display: flex;
   justify-content: space-between;
@@ -126,4 +126,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 1400px) {
+  .movie-image {
+    height: 270px !important;
+    width: 170px !important;
+  }
+  .top-block h1 {
+    font-size: 20px;
+  }
+  .movie-title-best {
+    font-size: 20px;
+  }
+  .movie-view-date-best {
+    font-size: 14px;
+  }
+  .movie-comment-best {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .movie-info {
+    flex-direction: column;
+    padding: 0px 0px;
+  }
+  .movie-card-best {
+    padding: 0px;
+  }
 }

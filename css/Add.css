@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
-  width: 1200px;
+  width: 65%;
   flex-wrap: wrap;
   padding-top: 50px;
   height: auto;
@@ -22,6 +22,7 @@
 .add-page ::placeholder {
   font-family: "GT Eesti Pro Display";
   font-weight: 400;
+  font-size: 16px !important;
 }
 
 .ui-select {
@@ -126,4 +127,39 @@
 }
 .add-button:hover {
   background-color: #111;
+}
+
+@media screen and (max-width: 1900px) {
+  .add-page {
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+  .add-box,
+  .add-box-2 {
+    margin: 20px auto;
+  }
+}
+@media screen and (max-width: 900px) {
+  .add-page {
+    width: 100%;
+  }
+  .add-box-2 {
+    width: fit-content;
+    padding: 0px 20px;
+  }
+  .add-page textarea {
+    margin-top: 30px;
+    width: 80%;
+    font-size: 16px;
+    min-height: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .add-page input {
+    width: 200px;
+  }
+  .selecticks {
+    width: 200px;
+  }
 }

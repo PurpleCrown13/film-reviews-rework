@@ -195,22 +195,6 @@ const Add = () => {
               required
               className="datepicker"
             />
-
-            {/* <Select
-              value={formData.genre}
-              onChange={handleinputChange}
-              name="genre"
-              isRequired
-              className="dark ui-select"
-              labelPlacement={"outside"}
-              placeholder="Genre"
-            >
-              {genres.map((genre) => (
-                <SelectItem key={genre.value} value={genre.value}>
-                  {genre.label}
-                </SelectItem>
-              ))}
-            </Select> */}
             <select
               value={formData.genre}
               onChange={handleinputChange}
@@ -278,9 +262,9 @@ const Add = () => {
                 Add to Masterpiece
               </Checkbox>
             </label>
-             <button className="add-button" type="submit">
-            Add
-          </button>
+            <button className="add-button" type="submit">
+              Add
+            </button>
           </div>
           <div className="add-box-2">
             <Slider
@@ -371,7 +355,6 @@ const Add = () => {
               name="comment"
             ></textarea>
           </div>
-         
         </form>
       </div>
     </motion.div>

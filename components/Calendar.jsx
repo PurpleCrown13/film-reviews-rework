@@ -77,7 +77,7 @@ const Calendar = () => {
     return (
       <div key={`${year}-${month}`} className="month">
         <div className="month-header">
-          {new Date(year, month).toLocaleString("default", { month: "long" })}
+          {new Date(year, month).toLocaleString("en-US", { month: "long" })}
         </div>
         <div className="days">
           {weekDays.map((day, index) => (
