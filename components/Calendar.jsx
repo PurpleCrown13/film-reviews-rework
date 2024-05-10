@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../css/Calendar.css";
 import axios from "axios";
-import { parse, startOfMonth, getDay, format } from "date-fns"; // Добавляем функции startOfMonth, getDay и format из библиотеки date-fns
+import { parse, startOfMonth, getDay, format } from "date-fns";
 import { jwtDecode } from "jwt-decode";
 import { Helmet } from "react-helmet";
 
@@ -19,7 +19,7 @@ const Calendar = () => {
   const fetchMovieDates = async () => {
     try {
       const response = await axios.get(
-        "https://sharpleaf.biz.ua/movie.heaven.api/api-all.php"
+        "https://sharpleaf.biz.ua/film-reviews-api/api-all.php"
       );
       const dates = response.data
         .filter((movie) => movie.login === login)
@@ -60,10 +60,10 @@ const Calendar = () => {
 
     for (let day = 1; day <= totalDays; day++) {
       const currentDate = new Date(year, month, day);
-      const isPastDate = currentDate < new Date(); // Проверяем, прошла ли дата
+      const isPastDate = currentDate < new Date();
       const isCurrentDate =
-        currentDate.toDateString() === new Date().toDateString(); // Проверяем, является ли текущей датой
-      const isUnwatchedMovie = isPastDate && !isMovieDay(currentDate); // Проверяем, не было ли просмотра и дата уже прошла
+        currentDate.toDateString() === new Date().toDateString();
+      const isUnwatchedMovie = isPastDate && !isMovieDay(currentDate);
       const classNames = `day ${isMovieDay(currentDate) ? "movie-day" : ""} ${
         isUnwatchedMovie && !isCurrentDate ? "unwatched-movie" : ""
       } ${isCurrentDate ? "current-date" : ""}`;

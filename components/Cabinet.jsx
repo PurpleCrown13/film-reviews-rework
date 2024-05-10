@@ -237,7 +237,7 @@ const Cabinet = () => {
     ],
   };
   const calculateData = (apiData) => {
-    const monthCounts = Array(12).fill(0); // Создаем массив из 12 нулей для каждого месяца
+    const monthCounts = Array(12).fill(0);
     const login = decoded.login;
     const dateRegex = /(\d{1,2}[./]\d{1,2}[./]\d{2,4})/;
     apiData.forEach((item) => {
@@ -245,13 +245,12 @@ const Cabinet = () => {
       if (date) {
         const matches = date.match(dateRegex);
         if (matches) {
-          // Извлекаем дату из совпадения
           const matchedDate = matches[1];
           if (matchedDate.endsWith("23") || matchedDate.endsWith("2023")) {
             if (item.login === login) {
-              const monthIndex = parseInt(matchedDate.split(/[./]/)[1]) - 1; // Получаем индекс месяца
+              const monthIndex = parseInt(matchedDate.split(/[./]/)[1]) - 1;
               if (!isNaN(monthIndex)) {
-                monthCounts[monthIndex]++; // Увеличиваем счетчик для данного месяца
+                monthCounts[monthIndex]++;
               }
             }
           }
@@ -261,7 +260,7 @@ const Cabinet = () => {
     return monthCounts;
   };
   const calculateData2024 = (apiData24) => {
-    const monthCounts = Array(12).fill(0); // Создаем массив из 12 нулей для каждого месяца
+    const monthCounts = Array(12).fill(0);
     const login = decoded.login;
     const dateRegex = /(\d{1,2}[./]\d{1,2}[./]\d{2,4})/;
     apiData24.forEach((item) => {
@@ -269,13 +268,12 @@ const Cabinet = () => {
       if (date) {
         const matches = date.match(dateRegex);
         if (matches) {
-          // Извлекаем дату из совпадения
           const matchedDate = matches[1];
           if (matchedDate.includes("2024")) {
             if (item.login === login) {
-              const monthIndex = parseInt(matchedDate.split(/[./]/)[1]) - 1; // Получаем индекс месяца
+              const monthIndex = parseInt(matchedDate.split(/[./]/)[1]) - 1;
               if (!isNaN(monthIndex)) {
-                monthCounts[monthIndex]++; // Увеличиваем счетчик для данного месяца
+                monthCounts[monthIndex]++;
               }
             }
           }
@@ -306,30 +304,30 @@ const Cabinet = () => {
     labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
     datasets: [
       {
-        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Изначально все значения равны нулю
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         backgroundColor: [
-          "rgba(255, 52, 26, 0.5)", // #FF341A в формате RGBA
-          "rgba(246, 125, 0, 0.5)", // #F67D00 в формате RGBA
-          "rgba(235, 246, 0, 0.5)", // #EBF600 в формате RGBA
-          "rgba(235, 246, 0, 0.5)", // #EBF600 в формате RGBA
-          "rgba(11, 182, 82, 0.5)", // #0BB652 в формате RGBA
-          "rgba(11, 182, 82, 0.5)", // #0BB652 в формате RGBA
-          "rgba(11, 182, 82, 0.5)", // #0BB652 в формате RGBA
-          "rgba(0, 155, 255, 0.5)", // #009BFF в формате RGBA
-          "rgba(0, 155, 255, 0.5)", // #009BFF в формате RGBA
-          "rgba(200, 150, 217, 0.5)", // #C896D9 в формате RGBA
+          "rgba(255, 52, 26, 0.5)",
+          "rgba(246, 125, 0, 0.5)",
+          "rgba(235, 246, 0, 0.5)",
+          "rgba(235, 246, 0, 0.5)",
+          "rgba(11, 182, 82, 0.5)",
+          "rgba(11, 182, 82, 0.5)",
+          "rgba(11, 182, 82, 0.5)",
+          "rgba(0, 155, 255, 0.5)",
+          "rgba(0, 155, 255, 0.5)",
+          "rgba(200, 150, 217, 0.5)",
         ],
         borderColor: [
-          "rgba(255, 52, 26, 1)", // #FF341A в формате RGBA
-          "rgba(246, 125, 0, 1)", // #F67D00 в формате RGBA
-          "rgba(235, 246, 0, 1)", // #EBF600 в формате RGBA
-          "rgba(235, 246, 0, 1)", // #EBF600 в формате RGBA
-          "rgba(11, 182, 82, 0.5)", // #0BB652 в формате RGBA
-          "rgba(11, 182, 82, 1)", // #0BB652 в формате RGBA
-          "rgba(11, 182, 82, 1)", // #0BB652 в формате RGBA
-          "rgba(0, 155, 255, 1)", // #009BFF в формате RGBA
-          "rgba(0, 155, 255, 1)", // #009BFF в формате RGBA
-          "rgba(200, 150, 217, 1)", // #C896D9 в формате RGBA
+          "rgba(255, 52, 26, 1)",
+          "rgba(246, 125, 0, 1)",
+          "rgba(235, 246, 0, 1)",
+          "rgba(235, 246, 0, 1)",
+          "rgba(11, 182, 82, 0.5)",
+          "rgba(11, 182, 82, 1)",
+          "rgba(11, 182, 82, 1)",
+          "rgba(0, 155, 255, 1)",
+          "rgba(0, 155, 255, 1)",
+          "rgba(200, 150, 217, 1)",
         ],
         borderWidth: 2,
       },
@@ -339,30 +337,30 @@ const Cabinet = () => {
     labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
     datasets: [
       {
-        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Изначально все значения равны нулю
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         backgroundColor: [
-          "rgba(255, 52, 26, 0.5)", // #FF341A в формате RGBA
-          "rgba(246, 125, 0, 0.5)", // #F67D00 в формате RGBA
-          "rgba(235, 246, 0, 0.5)", // #EBF600 в формате RGBA
-          "rgba(235, 246, 0, 0.5)", // #EBF600 в формате RGBA
-          "rgba(11, 182, 82, 0.5)", // #0BB652 в формате RGBA
-          "rgba(11, 182, 82, 0.5)", // #0BB652 в формате RGBA
-          "rgba(11, 182, 82, 0.5)", // #0BB652 в формате RGBA
-          "rgba(0, 155, 255, 0.5)", // #009BFF в формате RGBA
-          "rgba(0, 155, 255, 0.5)", // #009BFF в формате RGBA
-          "rgba(200, 150, 217, 0.5)", // #C896D9 в формате RGBA
+          "rgba(255, 52, 26, 0.5)",
+          "rgba(246, 125, 0, 0.5)",
+          "rgba(235, 246, 0, 0.5)",
+          "rgba(235, 246, 0, 0.5)",
+          "rgba(11, 182, 82, 0.5)",
+          "rgba(11, 182, 82, 0.5)",
+          "rgba(11, 182, 82, 0.5)",
+          "rgba(0, 155, 255, 0.5)",
+          "rgba(0, 155, 255, 0.5)",
+          "rgba(200, 150, 217, 0.5)",
         ],
         borderColor: [
-          "rgba(255, 52, 26, 1)", // #FF341A в формате RGBA
-          "rgba(246, 125, 0, 1)", // #F67D00 в формате RGBA
-          "rgba(235, 246, 0, 1)", // #EBF600 в формате RGBA
-          "rgba(235, 246, 0, 1)", // #EBF600 в формате RGBA
-          "rgba(11, 182, 82, 0.5)", // #0BB652 в формате RGBA
-          "rgba(11, 182, 82, 1)", // #0BB652 в формате RGBA
-          "rgba(11, 182, 82, 1)", // #0BB652 в формате RGBA
-          "rgba(0, 155, 255, 1)", // #009BFF в формате RGBA
-          "rgba(0, 155, 255, 1)", // #009BFF в формате RGBA
-          "rgba(200, 150, 217, 1)", // #C896D9 в формате RGBA
+          "rgba(255, 52, 26, 1)",
+          "rgba(246, 125, 0, 1)",
+          "rgba(235, 246, 0, 1)",
+          "rgba(235, 246, 0, 1)",
+          "rgba(11, 182, 82, 0.5)",
+          "rgba(11, 182, 82, 1)",
+          "rgba(11, 182, 82, 1)",
+          "rgba(0, 155, 255, 1)",
+          "rgba(0, 155, 255, 1)",
+          "rgba(200, 150, 217, 1)",
         ],
         borderWidth: 2,
       },
@@ -372,30 +370,30 @@ const Cabinet = () => {
     labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
     datasets: [
       {
-        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Изначально все значения равны нулю
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         backgroundColor: [
-          "rgba(255, 52, 26, 0.5)", // #FF341A в формате RGBA
-          "rgba(246, 125, 0, 0.5)", // #F67D00 в формате RGBA
-          "rgba(235, 246, 0, 0.5)", // #EBF600 в формате RGBA
-          "rgba(235, 246, 0, 0.5)", // #EBF600 в формате RGBA
-          "rgba(11, 182, 82, 0.5)", // #0BB652 в формате RGBA
-          "rgba(11, 182, 82, 0.5)", // #0BB652 в формате RGBA
-          "rgba(11, 182, 82, 0.5)", // #0BB652 в формате RGBA
-          "rgba(0, 155, 255, 0.5)", // #009BFF в формате RGBA
-          "rgba(0, 155, 255, 0.5)", // #009BFF в формате RGBA
-          "rgba(200, 150, 217, 0.5)", // #C896D9 в формате RGBA
+          "rgba(255, 52, 26, 0.5)",
+          "rgba(246, 125, 0, 0.5)",
+          "rgba(235, 246, 0, 0.5)",
+          "rgba(235, 246, 0, 0.5)",
+          "rgba(11, 182, 82, 0.5)",
+          "rgba(11, 182, 82, 0.5)",
+          "rgba(11, 182, 82, 0.5)",
+          "rgba(0, 155, 255, 0.5)",
+          "rgba(0, 155, 255, 0.5)",
+          "rgba(200, 150, 217, 0.5)",
         ],
         borderColor: [
-          "rgba(255, 52, 26, 1)", // #FF341A в формате RGBA
-          "rgba(246, 125, 0, 1)", // #F67D00 в формате RGBA
-          "rgba(235, 246, 0, 1)", // #EBF600 в формате RGBA
-          "rgba(235, 246, 0, 1)", // #EBF600 в формате RGBA
-          "rgba(11, 182, 82, 0.5)", // #0BB652 в формате RGBA
-          "rgba(11, 182, 82, 1)", // #0BB652 в формате RGBA
-          "rgba(11, 182, 82, 1)", // #0BB652 в формате RGBA
-          "rgba(0, 155, 255, 1)", // #009BFF в формате RGBA
-          "rgba(0, 155, 255, 1)", // #009BFF в формате RGBA
-          "rgba(200, 150, 217, 1)", // #C896D9 в формате RGBA
+          "rgba(255, 52, 26, 1)",
+          "rgba(246, 125, 0, 1)",
+          "rgba(235, 246, 0, 1)",
+          "rgba(235, 246, 0, 1)",
+          "rgba(11, 182, 82, 0.5)",
+          "rgba(11, 182, 82, 1)",
+          "rgba(11, 182, 82, 1)",
+          "rgba(0, 155, 255, 1)",
+          "rgba(0, 155, 255, 1)",
+          "rgba(200, 150, 217, 1)",
         ],
         borderWidth: 2,
       },
@@ -407,7 +405,7 @@ const Cabinet = () => {
   };
   useEffect(() => {
     axios
-      .get("https://sharpleaf.biz.ua/movie.heaven.api/api-top5.php")
+      .get("https://sharpleaf.biz.ua/film-reviews-api/api-top5.php")
       .then((response) => {
         const data = response.data;
         const login = decoded.login;
@@ -415,8 +413,6 @@ const Cabinet = () => {
         if (userRecord) {
           const existValue = userRecord.exist == "true";
           setExist(existValue);
-          // console.log("exist value:", existValue);
-          // console.log("exist value:", userRecord.name1);
         } else {
           setExist(false);
           console.log("exist value:", false);
@@ -426,17 +422,14 @@ const Cabinet = () => {
         console.error(error);
       });
     axios
-      .get("https://sharpleaf.biz.ua/movie.heaven.api/api-all.php")
+      .get("https://sharpleaf.biz.ua/film-reviews-api/api-all.php")
       .then((response) => {
         const data = response.data;
         const calculatedData = calculateData(data);
-        // console.log(calculatedData);
 
         const calculatedData2024 = calculateData2024(data);
         setData(calculatedData);
         setData2024(calculatedData2024);
-
-        // console.log(dataLine2024);
 
         const filteredYear2023Data = data.filter(
           (item) =>
@@ -733,7 +726,6 @@ const Cabinet = () => {
     document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     localStorage.setItem("logoutMessage", logoutMessage);
     history("/login");
-    // location.reload();
     window.scrollTo(0, 0);
   };
   const top5movies = [
@@ -742,21 +734,16 @@ const Cabinet = () => {
     { value: "rabbit", label: "Витя" },
   ];
   const handleSwitchChange = (value) => {
-    // Обновляем состояние exist при изменении переключателя
     setExist(value);
-
-    // Отправляем значение на сервер
     axios
-      .post("https://sharpleaf.biz.ua/movie.heaven.api/update-exist.php", {
+      .post("https://sharpleaf.biz.ua/film-reviews-api/update-exist.php", {
         login: decoded.login,
-        exist: value ? "true" : "false", // Преобразуем значение в "true" или "false"
+        exist: value ? "true" : "false",
       })
       .then((response) => {
-        // Обработка успешного запроса
         console.log("Значение успешно отправлено на сервер.");
       })
       .catch((error) => {
-        // Обработка ошибки
         console.error("Ошибка при отправке значения на сервер:", error);
       });
   };

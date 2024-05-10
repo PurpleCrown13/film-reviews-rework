@@ -35,7 +35,7 @@ const FranchiseDetailed = () => {
     error,
     isValidating,
   } = useSWR(
-    "https://sharpleaf.biz.ua/movie.heaven.api/api-all.php",
+    "https://sharpleaf.biz.ua/film-reviews-api/api-all.php",
     async (url) => {
       const response = await fetch(url);
       const data = await response.json();
@@ -79,15 +79,9 @@ const FranchiseDetailed = () => {
             className="detailed-table"
             initial={{
               opacity: 0,
-              // y: 20,
             }}
             animate={{
               opacity: 1,
-              // y: 0,
-              // transition: {
-              //   delay: 0.1,
-              //   duration: 0.3,
-              // },
             }}
           >
             <thead>
@@ -106,15 +100,9 @@ const FranchiseDetailed = () => {
                   className="clickable-row"
                   initial={{
                     opacity: 0,
-                    // y: 100,
                   }}
                   animate={{
                     opacity: 1,
-                    // y: 0,
-                    // transition: {
-                    //   delay: 0.2 + index * 0.1,
-                    //   duration: 0.3,
-                    // },
                   }}
                 >
                   <td className="f-d-season">{item.season}</td>

@@ -29,7 +29,7 @@ const Edit = () => {
     const fetchMovie = async () => {
       try {
         const response = await axios.get(
-          `https://sharpleaf.biz.ua/movie.heaven.api/api-all.php?id=${id}`
+          `https://sharpleaf.biz.ua/film-reviews-api/api-all.php?id=${id}`
         );
         const foundMovie = response.data.find((movie) => movie.id === id);
         if (foundMovie) {
@@ -64,7 +64,7 @@ const Edit = () => {
         masterpiece: isMasterpiece ? "yes" : "",
       };
       await axios.post(
-        `https://sharpleaf.biz.ua/movie.heaven.api/api-update.php?id=${id}`,
+        `https://sharpleaf.biz.ua/film-reviews-api/api-update.php?id=${id}`,
         updatedMovie
       );
       history(`/movies/${id}`);

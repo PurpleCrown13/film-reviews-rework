@@ -32,13 +32,12 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://sharpleaf.biz.ua/movie.heaven.api/api-login.php",
+        "https://sharpleaf.biz.ua/film-reviews-api/api-login.php",
         {
           login,
           pass,
         }
       );
-      // console.log(response.data);
       if (response.status === 200) {
         const token = response.data.token;
         const decoded = jwtDecode(token);
@@ -48,7 +47,9 @@ const Login = () => {
           document.cookie = `token=${token}; max-age=${
             60 * 60 * 24 * 10
           }; path=/`;
-
+          setTimeout(() => {
+            window.location.reload(true);
+          }, 100);
           history("/cabinet");
         } else {
           console.error("Invalid token format:", decoded);

@@ -64,7 +64,7 @@ const Top5Settings = () => {
       };
 
       await axios.post(
-        "https://sharpleaf.biz.ua/movie.heaven.api/top5-add.php",
+        "https://sharpleaf.biz.ua/film-reviews-api/top5-add.php",
         requestData
       );
       window.location.reload();
@@ -77,7 +77,7 @@ const Top5Settings = () => {
     const fetchData = async () => {
       try {
         const moviesResponse = await axios.get(
-          "https://sharpleaf.biz.ua/movie.heaven.api/api-profile.php"
+          "https://sharpleaf.biz.ua/film-reviews-api/api-profile.php"
         );
         const userLogin = decoded.login;
         const validMovies = moviesResponse.data.filter(
@@ -115,7 +115,6 @@ const Top5Settings = () => {
     const fieldName = `name${step}`;
     return !!selectedMovies[fieldName];
   };
-
 
   return (
     <div className="top5-container">

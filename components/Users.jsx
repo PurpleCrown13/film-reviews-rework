@@ -8,7 +8,7 @@ function Users() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("https://sharpleaf.biz.ua/movie.heaven.api/user-count-api.php")
+    fetch("https://sharpleaf.biz.ua/film-reviews-api/user-count-api.php")
       .then((response) => response.json())
       .then((data) => {
         setUsers(data);

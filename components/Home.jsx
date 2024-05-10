@@ -47,9 +47,8 @@ const Home = () => {
     const fetchMovies = async () => {
       try {
         const response = await axios.get(
-          "https://sharpleaf.biz.ua/movie.heaven.api/api-all.php"
+          "https://sharpleaf.biz.ua/film-reviews-api/api-all.php"
         );
-        // Фильтрация данных
         const filteredMovies = response.data.filter(
           (movie) => movie.login === login
         );
@@ -168,7 +167,6 @@ const Home = () => {
       backgroundColor: "#0A0A09",
       border: "none",
       borderRadius: "10px",
-      // boxShadow: state.isFocused ? "0 0 0 2px #888" : "none",
       padding: "5px",
       width: "40vw",
       textAlign: "center",
@@ -192,7 +190,7 @@ const Home = () => {
       fontSize: "14px",
       textAlign: "center",
       "&:hover": {
-        color: "black", // Измените цвет текста при наведении здесь
+        color: "black",
       },
     }),
     menu: (provided, state) => ({
@@ -210,12 +208,12 @@ const Home = () => {
     }),
     placeholder: (provided) => ({
       ...provided,
-      color: "#fff", // Цвет плейсхолдера
+      color: "#fff",
       fontFamily: "GT Eesti Pro Display",
     }),
     input: (provided) => ({
       ...provided,
-      color: "#fff", // Цвет текста в Select
+      color: "#fff",
     }),
   };
 
@@ -317,7 +315,6 @@ const Home = () => {
             </div>
             <div className="sidebar">
               {" "}
-              {/* Добавляем панель поиска */}
               <h1 className="page-title">Search:</h1>
               <div className="search-bar">
                 <motion.input
@@ -325,8 +322,6 @@ const Home = () => {
                   placeholder=""
                   value={searchTerm}
                   onChange={handleSearchChange}
-                  // whileFocus={{ width: "100%" }}
-                  // transition={{ duration: 0.3, ease: "linear" }}
                 />
               </div>
             </div>
@@ -336,7 +331,7 @@ const Home = () => {
 
       {isLoading ? (
         <div className="spinner">
-          <span class="loader"></span>
+          <span className="loader"></span>
         </div>
       ) : (
         <div className="wrapper">
@@ -391,29 +386,7 @@ const Home = () => {
                     {movie.rating}
                   </div>
                   {movie.masterpiece === "yes" && (
-                    // <div className="masterpiece">
-                    //   <svg
-                    //     fill="#000000"
-                    //     width="64px"
-                    //     height="64px"
-                    //     viewBox="0 0 32 32"
-                    //     version="1.1"
-                    //     xmlns="https://www.w3.org/2000/svg"
-                    //   >
-                    //     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    //     <g
-                    //       id="SVGRepo_tracerCarrier"
-                    //       stroke-linecap="round"
-                    //       stroke-linejoin="round"
-                    //     ></g>
-                    //     <g id="SVGRepo_iconCarrier">
-                    //       {" "}
-                    //       <title>star-round</title>{" "}
-                    //       <path d="M0 16q0-3.232 1.28-6.208t3.392-5.12 5.12-3.392 6.208-1.28q3.264 0 6.24 1.28t5.088 3.392 3.392 5.12 1.28 6.208q0 3.264-1.28 6.208t-3.392 5.12-5.12 3.424-6.208 1.248-6.208-1.248-5.12-3.424-3.392-5.12-1.28-6.208zM4 16q0 3.264 1.6 6.048t4.384 4.352 6.016 1.6 6.016-1.6 4.384-4.352 1.6-6.048-1.6-6.016-4.384-4.352-6.016-1.632-6.016 1.632-4.384 4.352-1.6 6.016zM6.496 12.928l6.56-0.96 2.944-5.952 2.944 5.952 6.56 0.96-4.768 4.64 1.152 6.528-5.888-3.072-5.888 3.072 1.152-6.528z"></path>{" "}
-                    //     </g>
-                    //   </svg>
-                    // </div>
-                    <div class="ribbon">
+                    <div className="ribbon">
                       <span>G.O.A.T.</span>
                     </div>
                   )}

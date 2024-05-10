@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { useNavigate, Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
-import "../css/RegisterLogin.css"
+import "../css/RegisterLogin.css";
 const Register = () => {
   const history = useNavigate();
   const MySwal = withReactContent(Swal);
@@ -39,7 +39,7 @@ const Register = () => {
         }
 
         const checkLoginResponse = await fetch(
-          "https://sharpleaf.biz.ua/movie.heaven.api/api-check-login.php",
+          "https://sharpleaf.biz.ua/film-reviews-api/api-check-login.php",
           {
             method: "POST",
             headers: {
@@ -54,7 +54,7 @@ const Register = () => {
 
           if (isLoginUnique) {
             const registerResponse = await fetch(
-              "https://sharpleaf.biz.ua/movie.heaven.api/api-register.php",
+              "https://sharpleaf.biz.ua/film-reviews-api/api-register.php",
               {
                 method: "POST",
                 headers: {
@@ -70,7 +70,7 @@ const Register = () => {
 
             if (registerResponse.ok) {
               const secondTableResponse = await fetch(
-                "https://sharpleaf.biz.ua/movie.heaven.api/api-register-top5.php",
+                "https://sharpleaf.biz.ua/film-reviews-api/api-register-top5.php",
                 {
                   method: "POST",
                   headers: {

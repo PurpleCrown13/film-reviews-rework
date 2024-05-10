@@ -37,7 +37,7 @@ const Plannes = () => {
     try {
       setIsLoading(true);
       const response = await axios.get(
-        "https://sharpleaf.biz.ua/movie.heaven.api/api-all-plans.php"
+        "https://sharpleaf.biz.ua/film-reviews-api/api-all-plans.php"
       );
       const filteredPlans = response.data.filter(
         (plan) => plan.login === login
@@ -61,7 +61,7 @@ const Plannes = () => {
     }
     try {
       await axios.post(
-        "https://sharpleaf.biz.ua/movie.heaven.api/api-add-plans.php",
+        "https://sharpleaf.biz.ua/film-reviews-api/api-add-plans.php",
         {
           login: login,
           name: inputValue,
@@ -78,7 +78,7 @@ const Plannes = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://sharpleaf.biz.ua/movie.heaven.api/delete-plans.php?id=${id}`
+        `https://sharpleaf.biz.ua/film-reviews-api/delete-plans.php?id=${id}`
       );
       fetchPlans();
     } catch (error) {

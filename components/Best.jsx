@@ -48,7 +48,7 @@ const Best = () => {
     const fetchMovies = async () => {
       try {
         const response = await axios.get(
-          "https://sharpleaf.biz.ua/movie.heaven.api/api-all.php"
+          "https://sharpleaf.biz.ua/film-reviews-api/api-all.php"
         );
         const filteredMovies = response.data.filter(
           (movie) => movie.masterpiece === "yes" && movie.login === login

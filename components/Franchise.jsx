@@ -36,7 +36,7 @@ const Franchise = () => {
     error,
     isValidating,
   } = useSWR(
-    `https://sharpleaf.biz.ua/movie.heaven.api/api-all.php?login=${login}`,
+    `https://sharpleaf.biz.ua/film-reviews-api/api-all.php?login=${login}`,
     async (url) => {
       const response = await fetch(url);
       const data = await response.json();
@@ -77,11 +77,6 @@ const Franchise = () => {
     history(`/franchise/${itemFr}`);
   };
 
-  // const rowVariants = {
-  //   hidden: { opacity: 0, y: -100 },
-  //   visible: { opacity: 1, y: 0 },
-  // };
-
   const hoverVariants = {
     hover: { scale: 1.1 },
   };
@@ -112,7 +107,6 @@ const Franchise = () => {
             <motion.tr
               key={item.franchise}
               onClick={() => handleRowClickFranchise(item.franchise)}
-              // variants={rowVariants}
               initial="hidden"
               animate="visible"
               whileHover="hover"

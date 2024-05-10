@@ -37,12 +37,12 @@ const CabinetDetailed = () => {
   const fetchData = async () => {
     try {
       const top5Response = await axios.get(
-        `https://sharpleaf.biz.ua/movie.heaven.api/api-top5.php?login=${username}`
+        `https://sharpleaf.biz.ua/film-reviews-api/api-top5.php?login=${username}`
       );
       setTop5Data(top5Response.data);
 
       const watchedMoviesResponse = await axios.get(
-        `https://sharpleaf.biz.ua/movie.heaven.api/api-profile.php?username=${username}`
+        `https://sharpleaf.biz.ua/film-reviews-api/api-profile.php?username=${username}`
       );
       const filteredWatchedMovies = watchedMoviesResponse.data.filter(
         (movie) => movie.login === username
@@ -67,13 +67,13 @@ const CabinetDetailed = () => {
     let cartoonCount = 0;
     let seriesCount = 0;
     watchedMovies.forEach((movie) => {
-      if (movie.genre === "Аниме") {
+      if (movie.genre === "Anime") {
         animeCount++;
-      } else if (movie.genre === "Фильм") {
+      } else if (movie.genre === "Movie") {
         movieCount++;
-      } else if (movie.genre === "Мультфильм") {
+      } else if (movie.genre === "Cartoon") {
         cartoonCount++;
-      } else if (movie.genre === "Сериал") {
+      } else if (movie.genre === "TV show") {
         seriesCount++;
       }
     });
@@ -84,10 +84,10 @@ const CabinetDetailed = () => {
   }, [watchedMovies]);
 
   const handleLoadMore = () => {
-    setVisibleMoviesCount((prevCount) => prevCount + 40); // Увеличьте на желаемое количество
+    setVisibleMoviesCount((prevCount) => prevCount + 40);
   };
   const handleLoadMoreBest = () => {
-    setVisibleBestMoviesCount((prevCount) => prevCount + 18); // Увеличьте на желаемое количество
+    setVisibleBestMoviesCount((prevCount) => prevCount + 18);
   };
   if (top5Data.length == 0 || top5Data[0].exist == "false") {
     return (

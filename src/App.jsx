@@ -36,16 +36,21 @@ const Navigation = () => {
   return (
     <div className="header-links">
       <div className="header-links-block1">
-        <NavLink to="/" className="header-link" activeClassName="active" exact>
+        <NavLink
+          to="/"
+          className="header-link"
+          activeclassname="active"
+          exact="true"
+        >
           Home
         </NavLink>
-        <NavLink to="/add" className="header-link" activeClassName="active">
+        <NavLink to="/add" className="header-link" activeclassname="active">
           Add
         </NavLink>
-        <NavLink to="/best" className="header-link" activeClassName="active">
+        <NavLink to="/best" className="header-link" activeclassname="active">
           G.O.A.T.
         </NavLink>
-        <NavLink to="/plans" className="header-link" activeClassName="active">
+        <NavLink to="/plans" className="header-link" activeclassname="active">
           Plans
         </NavLink>
       </div>
@@ -53,40 +58,37 @@ const Navigation = () => {
         <NavLink
           to="/franchise"
           className="header-link"
-          activeClassName="active"
+          activeclassname="active"
         >
           Franchises
         </NavLink>
-        <NavLink to="/users" className="header-link" activeClassName="active">
+        <NavLink to="/users" className="header-link" activeclassname="active">
           Users
         </NavLink>
-        {/* <div className="badge">New</div> */}
         <NavLink
           to="/countdown"
           className="header-link"
-          activeClassName="active"
+          activeclassname="active"
         >
           Countdown
         </NavLink>
-        {/* <div className="badge">New</div> */}
       </div>
       <div className="header-links-block2">
         <NavLink
           to={`/profile/${login}`}
           className="header-link"
-          activeClassName="active"
+          activeclassname="active"
         >
           My Profile
         </NavLink>
         <NavLink
           to="/calendar"
           className="header-link"
-          activeClassName="active"
+          activeclassname="active"
         >
           Calendar
         </NavLink>
-        {/* <div className="badge">New</div> */}
-        <NavLink to="/cabinet" className="header-link" activeClassName="active">
+        <NavLink to="/cabinet" className="header-link" activeclassname="active">
           Settings
         </NavLink>
       </div>
@@ -109,6 +111,7 @@ const PageRoutes = () => {
       <Route path="/franchise/:franchise" element={<FranchiseDetailed />} />
       <Route path="/top5-settings/:login" element={<Top5Settings />} />
       <Route path="/profile/:username" element={<CabinetDetailed />} />
+      <Route path="/profile/null" element={<Login />} />
       <Route path="/cabinet" element={<Cabinet />} />
       <Route path="/calendar" element={<Calendar />} />
       <Route path="/movies/:id" element={<MovieCardDetailed />} />
@@ -123,7 +126,7 @@ const App = () => {
       <div className="total-site-container">
         <div className="header-box">
           <div className="header-2">
-            <div className="header-content">Movie Heaven</div>
+            <div className="header-content">Film Reviews</div>
           </div>
         </div>
         <div className="header-3">

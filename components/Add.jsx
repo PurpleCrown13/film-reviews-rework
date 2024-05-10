@@ -41,7 +41,7 @@ const Add = () => {
     season: "",
     image: "",
     year: "",
-    date: new Date(), // Установим дату по умолчанию как текущую дату
+    date: new Date(),
     genre: "",
     franchise: "",
     comment: "",
@@ -55,7 +55,6 @@ const Add = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    // Преобразование даты в нужный формат
     const formattedDate = `${String(formData.date.getDate()).padStart(
       2,
       "0"
@@ -65,7 +64,7 @@ const Add = () => {
 
     try {
       const response = await axios.post(
-        "https://sharpleaf.biz.ua/movie.heaven.api/api-add-all.php",
+        "https://sharpleaf.biz.ua/film-reviews-api/api-add-all.php",
         {
           ...formData,
           login: decoded.login,
@@ -78,13 +77,10 @@ const Add = () => {
           },
         }
       );
-      // Handle successful response
       console.log(response.data);
       history("/");
 
-      // Reset form
       setFormData({
-        // Reset form fields to initial values
         name: "",
         season: "",
         image: "",
@@ -101,7 +97,6 @@ const Add = () => {
         masterpiece: "",
       });
     } catch (error) {
-      // Handle error
       console.error(error);
     }
   };
@@ -132,10 +127,10 @@ const Add = () => {
   };
 
   const genres = [
-    { value: "Фильм", label: "Movie" },
-    { value: "Аниме", label: "Anime" },
-    { value: "Мультфильм", label: "Cartoon" },
-    { value: "Сериал", label: "TV show" },
+    { value: "Movie", label: "Movie" },
+    { value: "Anime", label: "Anime" },
+    { value: "Cartoon", label: "Cartoon" },
+    { value: "TV show", label: "TV show" },
   ];
 
   return (
@@ -275,7 +270,6 @@ const Add = () => {
               minValue={1}
               defaultValue={1}
               className="max-w-md next-ui-slider"
-              // showSteps
               disableThumbScale
               getValue={(evaluation) => `${evaluation} of 10`}
               onChange={(value) => handleSliderChange("plot", value)}
@@ -295,7 +289,6 @@ const Add = () => {
               minValue={1}
               defaultValue={1}
               className="max-w-md next-ui-slider"
-              // showSteps
               disableThumbScale
               getValue={(evaluation) => `${evaluation} of 10`}
               onChange={(value) => handleSliderChange("visual", value)}
@@ -315,7 +308,6 @@ const Add = () => {
               minValue={1}
               defaultValue={1}
               className="max-w-md next-ui-slider"
-              // showSteps
               disableThumbScale
               getValue={(evaluation) => `${evaluation} of 10`}
               onChange={(value) => handleSliderChange("originality", value)}
@@ -335,7 +327,6 @@ const Add = () => {
               minValue={1}
               defaultValue={1}
               className="max-w-md next-ui-slider"
-              // showSteps
               disableThumbScale
               getValue={(evaluation) => `${evaluation} of 10`}
               onChange={(value) => handleSliderChange("atmosphere", value)}

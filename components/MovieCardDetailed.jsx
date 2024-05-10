@@ -11,6 +11,7 @@ import { styled } from "@mui/material/styles";
 import { grey } from "@mui/material/colors";
 import { Helmet } from "react-helmet";
 import { jwtDecode } from "jwt-decode";
+import { FastAverageColor } from "fast-average-color";
 
 const MovieCardDetailed = () => {
   useEffect(() => {
@@ -24,6 +25,8 @@ const MovieCardDetailed = () => {
   const [blurComment, setBlurComment] = useState(true);
   const [showButton, setShowButton] = useState(true);
   const history = useNavigate();
+  const fac = new FastAverageColor();
+
   function getCookie(name) {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
@@ -68,7 +71,7 @@ const MovieCardDetailed = () => {
     const fetchMovie = async () => {
       try {
         const response = await axios.get(
-          "https://sharpleaf.biz.ua/movie.heaven.api/api-all.php"
+          "https://sharpleaf.biz.ua/film-reviews-api/api-all.php"
         );
         const foundMovie = response.data.find((movie) => movie.id === id);
         if (foundMovie) {
@@ -77,8 +80,8 @@ const MovieCardDetailed = () => {
           } else {
             setMovie(foundMovie);
             const franchiseResponse = await axios.get(
-              "https://sharpleaf.biz.ua/movie.heaven.api/api-all.php"
-            ); // Replace with your actual API endpoint for franchise data
+              "https://sharpleaf.biz.ua/film-reviews-api/api-all.php"
+            );
             const filteredFranchiseData = franchiseResponse.data.filter(
               (franchise) => franchise.franchise === foundMovie.franchise
             );
@@ -96,6 +99,29 @@ const MovieCardDetailed = () => {
 
     fetchMovie();
   }, [id, login]);
+  const [averageColor, setAverageColor] = useState(null);
+
+  useEffect(() => {
+    if (movie && movie.image) {
+      const proxyUrl =
+        "https://sharpleaf.biz.ua/movie.heaven.api/proxy/proxy.php?url=" +
+        encodeURIComponent(movie.image);
+      const img = document.createElement("img");
+      img.crossOrigin = "Anonymous";
+      img.src = proxyUrl;
+      img.onload = () => {
+        fac
+          .getColorAsync(img)
+          .then((color) => {
+            setAverageColor(color.rgba);
+            console.log("Average color:", color.rgba);
+          })
+          .catch((e) => {
+            console.log("Error while getting color:", e);
+          });
+      };
+    }
+  }, [movie]);
 
   if (loading) {
     return <div></div>;
@@ -131,14 +157,13 @@ const MovieCardDetailed = () => {
     try {
       await axios({
         method: "delete",
-        url: `https://sharpleaf.biz.ua/movie.heaven.api/api-delete-detailed.php?id=${id}`,
+        url: `https://sharpleaf.biz.ua/film-reviews-api/api-delete-detailed.php?id=${id}`,
         headers: {
           "Content-Type": "application/json",
         },
       });
       history("/");
     } catch (error) {
-      // Обработка ошибки при удалении данных
       console.error("Ошибка при удалении данных:", error);
     }
   };
@@ -207,7 +232,20 @@ const MovieCardDetailed = () => {
               </div>
             </div>
             <div className="right-block">
-              <div className="title">{movie.name}</div>
+              <div
+                className="title"
+                style={{
+                  background: averageColor
+                    ? `linear-gradient(to bottom, ${averageColor.replace(
+                        "1)",
+                        "0.9)"
+                      )}, ${averageColor.replace("1)", "0.25)")})
+                    `
+                    : "transparent",
+                }}
+              >
+                {movie.name}
+              </div>
 
               <div className="comment-container">
                 <div className="comment">
@@ -296,11 +334,11 @@ const MovieCardDetailed = () => {
                     xmlns="https://www.w3.org/2000/svg"
                     fill="#000000"
                   >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                     <g
                       id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></g>
                     <g id="SVGRepo_iconCarrier">
                       <path
@@ -322,11 +360,11 @@ const MovieCardDetailed = () => {
                     xmlns="https://www.w3.org/2000/svg"
                     fill="#000000"
                   >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                     <g
                       id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></g>
                     <g id="SVGRepo_iconCarrier">
                       <path
